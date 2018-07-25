@@ -26,12 +26,17 @@ public class MailSend extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_send);
 
-
         //Initializing the views
         nameOfDept = findViewById(R.id.deptName);
         editTextSubject = (EditText) findViewById(R.id.editTextSubject);
         editTextMessage = (EditText) findViewById(R.id.editTextMessage);
         infoDialog = findViewById(R.id.moreinfo);
+
+        Intent intent = getIntent();
+
+        String deptName = intent.getStringExtra(FirebaseActivity.DEPT_NAME);
+
+        nameOfDept.setText(deptName);
 
         buttonSend = (Button) findViewById(R.id.buttonSend);
 
@@ -56,16 +61,12 @@ public class MailSend extends AppCompatActivity implements View.OnClickListener 
 
         Intent intent = getIntent();
 
-        String deptName = intent.getStringExtra(FirebaseActivity.DEPT_NAME);
-
-        nameOfDept.setText(deptName);
-
         String email = intent.getStringExtra(FirebaseActivity.DEPT_EMAIL);
         String subject = editTextSubject.getText().toString().trim();
         String message = editTextMessage.getText().toString().trim();
 
         //Creating SendMail object
-        SendMail sm = new SendMail(this, email, subject, message);
+        SendMail sm = new SendMail(this, email, subject, message+"\n\n\nSend from QMS Application");
 
         //Executing sendmail to send email
         sm.execute();
@@ -98,16 +99,5 @@ public class MailSend extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         sendEmail();
-    }
-
-    private void hideNavigationBar()
-    {
-        this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_FULLSCREEN|
-                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
-                        View.SYSTEM_UI_FLAG_IMMERSIVE|
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY|
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|
-                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
     }
 }

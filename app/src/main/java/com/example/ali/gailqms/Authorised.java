@@ -48,6 +48,7 @@ public class Authorised extends AppCompatActivity {
                 if(pass.equals("QMS@1234"))
                 {
                     Intent intent = new Intent(Authorised.this,Staff.class);
+                    passCode.setText("");
                     startActivity(intent);
 
                 }

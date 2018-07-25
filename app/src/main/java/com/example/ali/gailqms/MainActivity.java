@@ -7,13 +7,14 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     CardView loginButton;
     EditText userName;
     EditText password;
-    CardView authorised;
+    TextView authorised;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +32,21 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,FirebaseActivity.class);
 
-                Config config = new Config(userName.getText().toString().trim(),password.getText().toString().trim());
+                if(userName.getText().toString().length() < 1 || password.getText().toString().length() < 1)
+                {
+                    Toast.makeText(MainActivity.this,"** No blanks **",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Intent intent = new Intent(MainActivity.this,FirebaseActivity.class);
+                    Config config = new Config(userName.getText().toString().trim(),password.getText().toString().trim());
+                    userName.setText("");
+                    password.setText("");
+                    startActivity(intent);
+                }
 
-                startActivity(intent);
+
             }
         });
 

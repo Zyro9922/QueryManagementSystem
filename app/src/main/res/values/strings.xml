@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">GAIL_QMS</string>
+    <string name="app_name">QMS</string>
+    <string name="action_settings">Settings</string>
+    <string name="toolbar_title">Contacts</string>
+    <string name="action_search">Search</string>
+    <string name="search_hint">Type department name or email...</string>
 </resources>

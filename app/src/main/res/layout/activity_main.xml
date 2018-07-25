@@ -11,12 +11,19 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         app:srcCompat="@drawable/logo" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QUERY MANAGEMENT SYSTEM"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/name"
@@ -28,7 +35,7 @@
         android:background="#11000000"
         android:ems="10"
         android:hint="E-mail ID"
-        android:textColor="#fff"
+        android:textColor="@color/justBLack"
         android:drawableLeft="@drawable/ic_action_name"
         android:inputType="textPersonName|textCapWords"/>
 
@@ -41,7 +48,7 @@
         android:background="#11000000"
         android:ems="10"
         android:hint="Password"
-        android:textColor="#fff"
+        android:textColor="@color/justBLack"
         android:drawableLeft="@drawable/ic_action_lock"
         android:inputType="textPassword"
         android:id="@+id/pass" />
@@ -72,31 +79,33 @@
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="#11000000"
-        app:cardCornerRadius="0dp"
-        android:id="@+id/auth">
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--app:cardBackgroundColor="#11000000"-->
+        <!--app:cardCornerRadius="0dp"-->
+        <!--android:id="@+id/auth">-->
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
             <TextView
-                android:id="@+id/for_auth"
-                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/auth"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="For Authorised Personnel Only"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
                 android:textColor="#000000"/>
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
+        <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
 
 
 </LinearLayout>
