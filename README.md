@@ -26,6 +26,8 @@ I also take the opportunity to express my heartfelt thanks to Ms. Renu Taneja, S
 
 ![Overview](https://github.com/Zyro9922/QueryManagementSystem/blob/master/Screenshots/Overview.png)
 
+I have set my read and write of firebase to NULL. You can easily integrate your firebase.
+
 ## Application Description
 
 ### First Activity
@@ -83,10 +85,11 @@ This is the last activity and you the user has successfully either updated the f
 
 * Logo made with [App Logo](https://www.designevo.com/) Free Online Logo Maker
 * [AndroidHive - Android RecyclerView adding Search Filter](https://www.androidhive.info/2017/11/android-recyclerview-with-search-filter-functionality/) This article helped me implement search in recyclerView
+* [Android Email App Using Javamail API in Android Studio](https://www.simplifiedcoding.net/android-email-app-using-javamail-api-in-android-studio/)
 * [Awesome Firebase](https://firebase.google.com/)
 * [Youtube](youtube.com) Helped a lot.
 * [StackOverflow](https://stackoverflow.com/) Cleared all my queries
-* [Android Email App Using Javamail API in Android Studio](https://www.simplifiedcoding.net/android-email-app-using-javamail-api-in-android-studio/)
+
 
 ## Conclusion
 
